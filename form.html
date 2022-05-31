@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test form</title>
+    <link href="styles/styles.css" rel="stylesheet">
+  </head>
+  <body>
+      <form action="/my-handling-form-page" method="post"> <!--initializes form with optional attributes, but best practices-->
+        <ul> <!--structure our code with <li> to make styling easier-->
+            <li> <!--for attribute on all label elements lets value id of form control associated with label-->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user-name"> <!--type attribute the MOST important; defines the way input element appears and behaves-->
+            </li>
+
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user-email"> <!--input does not need closing tag because it is an empty element-->
+                <!--have to put value attribute to default define input area-->
+            </li>
+
+            <li>
+                <label for="message">Message:</label>
+                <textarea id="msg" name="user-message"></textarea> <!--can define textarea by default in between its its opening/closing tags-->
+            </li>
+            
+            <li class="button"> 
+                <!--button element takes in three type values: submit, reset, or button-->
+                <!--submit sends form's data to web page defined by action of form element, reset resets all form widgets to default value, and button does nothing (defined by Javascript)!-->
+                <button type="submit">Send your message</button>
+            </li>
+        </ul>
+      </form>
+    <p>This is my test page for creating a form!</p>
+  </body>
+</html>
